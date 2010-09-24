@@ -16,6 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/CSS/%{pdir}-%{version}.tar.gz
 URL:		http://search.cpan.org/dist/CSS/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.553
 %if %{with tests}
 BuildRequires:	perl-Parse-RecDescent >= 1
 %endif
@@ -32,6 +33,7 @@ transformed into other formats.
 
 %prep
 %setup -q -n %{pdir}-%{version}
+%undos -f pm,pl
 
 %build
 %{__perl} Makefile.PL \
@@ -48,6 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a t $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
