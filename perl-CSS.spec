@@ -6,13 +6,13 @@
 %define	pdir	CSS
 Summary:	CSS - Object oriented access to Cascading Style Sheets (CSS)
 Name:		perl-CSS
-Version:	1.08
-Release:	2
+Version:	1.09
+Release:	1
 # same as Perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/CSS/%{pdir}-%{version}.tar.gz
-# Source0-md5:	a7b0f7256254fd55a15f8ce81eda7eaf
+# Source0-md5:	4b86ec12e673e545a5801f40ac1c5e48
 URL:		http://search.cpan.org/dist/CSS/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
