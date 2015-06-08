@@ -5,6 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	CSS
 Summary:	CSS - Object oriented access to Cascading Style Sheets (CSS)
+Summary(pl.UTF-8):	CSS - zorientowany obiektowo dostęp do arkuszy CSS (Cascading Style Sheets)
 Name:		perl-CSS
 Version:	1.09
 Release:	1
@@ -25,11 +26,18 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module can be used, along with a CSS::Parse::* module, to parse
+CSS module can be used, along with a CSS::Parse::* modules, to parse
 CSS data and represent it as a tree of objects.
 
-Using a CSS::Adaptor::* module, the CSS data tree can then be
+Using a CSS::Adaptor::* modules, the CSS data tree can then be
 transformed into other formats.
+
+%description -l pl.UTF-8
+Modułu CSS wraz z modułami CSS::Parse::* można używać do analizy
+danych CSS oraz reprezentowania ich jako drzewa obiektów.
+
+Przy użyciu modułów CSS::Adaptor::* drzewo danych CSS można
+przekształcić do innych formatów.
 
 %prep
 %setup -q -n %{pdir}-%{version}
@@ -58,9 +66,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/*.pm
+%{perl_vendorlib}/CSS.pm
 %{perl_vendorlib}/CSS/*.pm
 %{perl_vendorlib}/CSS/Adaptor
 %{perl_vendorlib}/CSS/Parse
-%{_mandir}/man3/*
+%{_mandir}/man3/CSS.3pm*
+%{_mandir}/man3/CSS::*.3pm*
 %{_examplesdir}/%{name}-%{version}
