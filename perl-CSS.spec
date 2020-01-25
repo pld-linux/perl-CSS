@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	CSS
 Summary:	CSS - Object oriented access to Cascading Style Sheets (CSS)
 Summary(pl.UTF-8):	CSS - zorientowany obiektowo dostęp do arkuszy CSS (Cascading Style Sheets)
