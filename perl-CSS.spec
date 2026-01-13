@@ -7,7 +7,7 @@ Summary:	CSS - Object oriented access to Cascading Style Sheets (CSS)
 Summary(pl.UTF-8):	CSS - zorientowany obiektowo dostęp do arkuszy CSS (Cascading Style Sheets)
 Name:		perl-CSS
 Version:	1.09
-Release:	1
+Release:	2
 # same as Perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
